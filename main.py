@@ -1,15 +1,11 @@
 from flask import Flask
 from flask import request
-from flask_script import Manager
 from recognize import *
 from file_import import *
 from VrModel2 import *
 import os
 
 app = Flask(__name__)
-app.debug = False
-app.run(host='0.0.0.0')
-manager = Manager(app)
 labels, audios = get_audios_and_labels(AUDIO_PATH, LABEL_PATH)
 words, word_num_map = generate_words_table(labels)
 
@@ -38,4 +34,4 @@ def recognize():
 
 
 if __name__ == '__main__':
-    manager.run()
+    app.run(host='0.0.0.0', port=5000, debug=False)
