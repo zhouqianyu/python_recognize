@@ -7,10 +7,12 @@ from VrModel2 import *
 import os
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
+app.run(host='0.0.0.0')
 manager = Manager(app)
 labels, audios = get_audios_and_labels(AUDIO_PATH, LABEL_PATH)
 words, word_num_map = generate_words_table(labels)
+
 
 @app.route('/')
 def index():
