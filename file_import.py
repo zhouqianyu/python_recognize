@@ -27,7 +27,7 @@ def get_labels(audio_files, trn_path):
             print(label_path)
             break
         if os.path.exists(label_path):
-            label_file = open(label_path, 'r', encoding='utf-8')
+            label_file = open(label_path, 'r', encoding='utf-8-sig')
         else:
             continue
         label = label_file.readline()
