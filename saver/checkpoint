@@ -1,2 +1,3 @@
-model_checkpoint_path: "vr_model.ckpt-1200"
+model_checkpoint_path: "vr_model.ckpt-800"
+all_model_checkpoint_paths: "vr_model.ckpt-800"
 all_model_checkpoint_paths: "vr_model.ckpt-1200"
